@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 text-center>My Profile</h1>
+  <h2 text-center>{{ profileData.fullname }}</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores neque adipisci inventore reprehenderit! Consequuntur assumenda quidem rerum, iure dolores, quo porro quibusdam quis reprehenderit perferendis eius nam? Similique, perspiciatis doloribus.</p>
+
+  <ion-item>
+    <ion-label floating >Fullname</ion-label>
+    <ion-input type="text" [(ngModel)]="profileData.fullname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating >Email</ion-label>
+    <ion-input type="email" [(ngModel)]="profileData.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating >Tel</ion-label>
+    <ion-input type="tel" [(ngModel)]="profileData.tel"></ion-input>
+  </ion-item>
+
+  <p>{{profileData | json}}</p>
+
+  <button ion-button (click)="showprofile()">Show Profile</button>
+</ion-content>
